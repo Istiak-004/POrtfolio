@@ -10,8 +10,8 @@ import NavLogo from '../public/assets/navLogo.png'
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#ecf0f3');
-  const [linkColor, setLinkColor] = useState('#1f2937');
+  const [navBg, setNavBg] = useState('#363636');
+  const [linkColor, setLinkColor] = useState('#ecf0f3');
   // const [position, setPosition] = useState('fixed')
   // const router = useRouter();
 
@@ -26,7 +26,7 @@ const Navbar = () => {
   //     setLinkColor('#ecf0f3');
   //   } else {
   //     setNavBg('#ecf0f3');
-  //     setLinkColor('#1f2937');
+  //     setLinkColor('#363636');
   //   }
   // }, [router]);
 
@@ -109,11 +109,11 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#363636] p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
-          <div>
+          <div style={{color:`${linkColor}`}}>
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
                 <a>
@@ -127,18 +127,19 @@ const Navbar = () => {
               </Link>
               <div
                 onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
+                className='rounded-full bg-[#363636] shadow-gray-300 shadow-md p-3 cursor-pointer'
+                style={{color:`${linkColor}`}}
               >
-                <AiOutlineClose />
+                <AiOutlineClose/>
               </div>
             </div>
             <div className='border-b border-gray-300 my-4'>
               <p className='w-[85%] md:w-[90%] py-4'>
-                Let&#39;s build something legendary together
+                Hello and thanks for visiting my profile!
               </p>
             </div>
           </div>
-          <div className='py-4 flex flex-col'>
+          <div style={{color:`${linkColor}`}} className='py-4 flex flex-col'>
             <ul className='uppercase'>
               <Link href='/'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
@@ -177,27 +178,27 @@ const Navbar = () => {
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <a
-                  href='https://www.linkedin.com/in/clint-briley-50056920a/'
+                  href='#'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <div className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <FaLinkedinIn />
                   </div>
                 </a>
                 <a
-                  href='https://github.com/fireclint'
+                  href='https://github.com/Isitak-004'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <div className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <FaGithub />
                   </div>
                 </a>
                 <Link href='/#contact'>
                   <div
                     onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+                    className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                   >
                     <AiOutlineMail />
                   </div>
@@ -205,7 +206,7 @@ const Navbar = () => {
                 <Link href='/resume'>
                   <div
                     onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+                    className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                   >
                     <BsFillPersonLinesFill />
                   </div>
