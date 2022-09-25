@@ -6,6 +6,11 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 // import { useRouter } from 'next/router';
 import NavLogo from '../public/assets/navLogo.png'
+import Linkedin from '../public/assets/icons/linkedin.png'
+import Github from '../public/assets/icons/github.png'
+import Mail from '../public/assets/icons/mail.png'
+import ResumeFile from '../public/assets/icons/file.png'
+import Reject from '../public/assets/icons/rejected.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -127,10 +132,10 @@ const Navbar = () => {
               </Link>
               <div
                 onClick={handleNav}
-                className='rounded-full bg-[#363636] shadow-gray-300 shadow-md p-3 cursor-pointer'
+                className=' p-3 cursor-pointer'
                 style={{color:`${linkColor}`}}
               >
-                <AiOutlineClose/>
+                <Image src={Reject} width="64px" height="64px" alt="/" />
               </div>
             </div>
             <div className='border-b border-gray-300 my-4'>
@@ -182,34 +187,38 @@ const Navbar = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <div className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <Image src={Linkedin} width="64px" height="64px" alt="/" />
+                  {/* <div className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <FaLinkedinIn />
-                  </div>
+                  </div> */}
                 </a>
                 <a
                   href='https://github.com/Isitak-004'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <div className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                  <Image src={Github} width="64px" height="64px" alt="/" />
+                  {/* <div className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                     <FaGithub />
-                  </div>
+                  </div> */}
                 </a>
                 <Link href='/#contact'>
-                  <div
+                  {/* <div
                     onClick={() => setNav(!nav)}
                     className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                   >
                     <AiOutlineMail />
-                  </div>
+                  </div> */}
+                  <Image src={Mail} width="64px" height="64px" alt="/" />
                 </Link>
                 <Link href='/resume'>
-                  <div
+                  {/* <div
                     onClick={() => setNav(!nav)}
                     className='rounded-full shadow-md shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                   >
                     <BsFillPersonLinesFill />
-                  </div>
+                  </div> */}
+                  <Image src={ResumeFile} width="64px" height="64px" alt="/" />
                 </Link>
               </div>
             </div>
