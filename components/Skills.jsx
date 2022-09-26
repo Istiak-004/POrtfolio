@@ -5,7 +5,7 @@ import Css from '../public/assets/skills/css.png';
 import Javascript from '../public/assets/skills/javascript.png';
 import ReactImg from '../public/assets/skills/react.png';
 import Tailwind from '../public/assets/skills/tailwind.png';
-import Github from '../public/assets/skills/github1.png';
+import Github from '../public/assets/skills/github-logo.png';
 import Firebase from '../public/assets/skills/firebase.png';
 import NextJS from '../public/assets/skills/nextjs.png'
 import AWS from '../public/assets/skills/aws.png';
@@ -15,6 +15,80 @@ import Django from '../public/assets/skills/django.png';
 import Postgres from '../public/assets/skills/postgres.png';
 
 const Skills = () => {
+  const techs = [
+    {
+      id:1,
+      title : 'Golang',
+      icon : Golang,
+      style : 'shadow-sky-400'
+    },
+    {
+      id:2,
+      title : 'Python',
+      icon : Python,
+      style : 'shadow-blue-700'
+    },
+    {
+      id:3,
+      title : 'Javascript',
+      icon : Javascript,
+      style : 'shadow-yellow-500'
+    },
+    {
+      id:4,
+      title : 'Django',
+      icon : Django,
+      style : 'shadow-green-700'
+    },
+    {
+      id:5,
+      title : 'Postgresql',
+      icon : Postgres,
+      style : 'shadow-sky-400'
+    },
+    {
+      id:6,
+      title : 'Html',
+      icon : Html,
+      style : 'shadow-orange-500'
+    },
+    {
+      id:7,
+      title : 'Css',
+      icon : Css,
+      style : 'shadow-sky-500'
+    },
+    {
+      id:8,
+      title : 'React',
+      icon : ReactImg,
+      style : 'shadow-blue-600'
+    },
+    {
+      id:9,
+      title : 'Tailwind Css',
+      icon : Tailwind,
+      style : 'shadow-sky-500'
+    },
+    {
+      id:10,
+      title : 'AWS',
+      icon : AWS,
+      style : 'shadow-yellow-300'
+    },
+    {
+      id:11,
+      title : 'Firebase',
+      icon : Firebase,
+      style : 'shadow-yellow-700'
+    },
+    {
+      id:12,
+      title : 'Github',
+      icon : Github,
+      style : 'shadow-blue-800'
+    },
+  ]
   return (
     <div id="skills" className="w-full lg:h-screen p-2 text-gray-200">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
@@ -23,126 +97,18 @@ const Skills = () => {
         </p>
         <h2 className="py-4">What I Can Do</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Golang} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Golang</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Python} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Python</h3>
+            {techs.map(({id,title,icon,style})=>(
+              <div key={id} className={`p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ${style}`}>
+              <div className="grid grid-cols-2 gap-4 justify-center items-center">
+                <div className="m-auto">
+                  <Image src={icon} width="64px" height="64px" alt="/" />
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                  <h3>{title}</h3>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Django} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Django</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Postgres} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Postgres</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 border-white">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Github} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Github</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Html} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>HTML</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Css} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>CSS</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Javascript} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>JavaScript</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={ReactImg} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>React</h3>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Tailwind} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Tailwind</h3>
-              </div>
-            </div>
-          </div>
-          {/* <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={Firebase} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Firebase</h3>
-              </div>
-            </div> 
-          </div> */}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={AWS} width="64px" height="64px" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>AWS</h3>
-              </div>
-            </div>
-          </div>
+            ))}         
         </div>
       </div>
     </div>
