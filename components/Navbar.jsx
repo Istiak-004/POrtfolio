@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import NavLogo from '../public/assets/navLogo.png'
+import NavLogo from '../public/assets/istiak_ahmed.png'
 import Linkedin from '../public/assets/icons/linkedin.png'
 import Github from '../public/assets/icons/github.png'
 import Mail from '../public/assets/icons/mail.png'
@@ -64,13 +64,18 @@ const Navbar = () => {
               <Link href="/#about">About</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
+              <Link href="/#services">Expertise</Link>
+            </li>
+            <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#skills">Skills</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#projects">Projects</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/resume">Resume</Link>
+              <a href="#" onClick={onButtonClick}>
+                Resume
+              </a>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#contact">Contact</Link>
@@ -133,6 +138,11 @@ const Navbar = () => {
               <Link href="/#about">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   About
+                </li>
+              </Link>
+              <Link href="/#services">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Expertise
                 </li>
               </Link>
               <Link href="/#skills">
