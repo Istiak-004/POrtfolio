@@ -9,6 +9,19 @@ import ProjectItem from './ProjectItem';
 import Card from './Card';
 
 const Services = () => {
+  const techs = [
+    {
+      id:1,
+      imageSrc : netflixImg,
+      headerTitle : 'Golang',
+      details : 'Lorem ipsum dolor, sit amet cons ectetur adipis icing elit. Praesentium, quibusdam facere quo laborum maiores sequi nam tenetur laud.',
+    },
+    {
+      id:2,
+      imageSrc : netflixImg,
+      headerTitle : 'Golang',
+      details : 'Lorem ipsum dolor, sit amet cons ectetur adipis icing elit. Praesentium, quibusdam facere quo laborum maiores sequi nam tenetur laud.',
+    },]
   return (
     <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
@@ -16,7 +29,13 @@ const Services = () => {
           Projects
         </p>
         <h2 className="py-4 text-gray-200">My Expertise</h2>
-        <Card/>
+        <div className='flex justify-between'>
+        {
+          techs.map(({id,imageSrc,headerTitle,details})=>(
+              <Card key={id} imageSrc={imageSrc} headerTitle={headerTitle} details={details}/>
+          ))
+        }
+        </div>
       </div>
     </div>
   );
