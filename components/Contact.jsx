@@ -24,7 +24,7 @@ const Contact = () => {
         <h2 className="py-4 text-gray-200">Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8 text-gray-200">
           {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-gray-400 rounded-xl p-4">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-purple-600 rounded-xl p-4">
             <div className="lg:p-4 h-full ">
               <div>
                 <Image
@@ -49,7 +49,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-md shadow-purple-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
                   </a>
@@ -58,17 +58,17 @@ const Contact = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-md shadow-purple-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub />
                     </div>
                   </a>
 
-                  <div className="rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div className="rounded-full shadow-md shadow-purple-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <AiOutlineMail />
                   </div>
                   <Link href="#contact">
                     <a onClick={onButtonClick}>
-                      <div className="rounded-full shadow-md shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <div className="rounded-full shadow-md shadow-purple-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                         <BsFillPersonLinesFill />
                       </div>
                     </a>
@@ -79,7 +79,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-md shadow-purple-600 rounded-xl lg:p-4">
             <div className="p-4">
               <form
                 id="formId"
@@ -132,9 +132,9 @@ const Contact = () => {
                       name="message"
                     ></textarea>
                   </div>
-                  <div className="flex flex-col py-2">
+                  <div class="flex space-x-2 justify-center">
                     <a
-                      className="text-gray-200 cursor-pointer"
+                      className="inline-block px-20 py-3 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out cursor-pointer"
                       onClick={formSubmmit}
                     >
                       Send Message
@@ -148,7 +148,7 @@ const Contact = () => {
         <div className="flex justify-center py-12">
           <Link href="/">
             <a>
-              <div className="rounded-full shadow-md shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-md shadow-purple-600 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                 <HiOutlineChevronDoubleUp
                   className="text-[#5651e5]"
                   size={30}

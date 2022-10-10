@@ -13,15 +13,22 @@ const Services = () => {
     {
       id:1,
       imageSrc : netflixImg,
-      headerTitle : 'Golang',
+      headerTitle : 'Software Development',
       details : 'Lorem ipsum dolor, sit amet cons ectetur adipis icing elit. Praesentium, quibusdam facere quo laborum maiores sequi nam tenetur laud.',
     },
     {
       id:2,
       imageSrc : netflixImg,
-      headerTitle : 'Golang',
+      headerTitle : 'Web Development',
       details : 'Lorem ipsum dolor, sit amet cons ectetur adipis icing elit. Praesentium, quibusdam facere quo laborum maiores sequi nam tenetur laud.',
-    },]
+    },
+    {
+      id:3,
+      imageSrc : netflixImg,
+      headerTitle : 'DevOps Support',
+      details : 'Lorem ipsum dolor, sit amet cons ectetur adipis icing elit. Praesentium, quibusdam facere quo laborum maiores sequi nam tenetur laud.',
+    },
+  ]
   return (
     <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">

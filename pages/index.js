@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import Services from '../components/Services'
 import Skills from '../components/Skills'
+import Work from '../components/Work'
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
       <Navbar/>
       <Header/>
       <About/>
-      <Services/>
+      <Work/>
+      {/* <Services/> */}
       <Skills/>
       <Projects/>
       <Contact/>
